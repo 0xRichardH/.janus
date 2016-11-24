@@ -1,0 +1,48 @@
+"  color molokai
+set background=light
+colorscheme solarized
+
+"let mapleader=","
+
+" clipboard
+if has('clipboard')
+  if has('unnamedplus')  " When possible use + register for copy-paste
+     set clipboard=unnamed,unnamedplus
+   else         " On mac and Windows, use * register for copy-paste
+     set clipboard=unnamed
+   endif
+endif
+
+" NerdTree
+map <C-e> :NERDTreeToggle<CR>
+
+" Strip trailing whitespace
+" function! <SID>StripTrailingWhitespaces()
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" StatusLine
+if janus#is_plugin_enabled('fugitive')
+  set statusline+=%{fugitive#statusline()}
+endif
+
+if janus#is_plugin_enabled('syntastic')
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+endif
+
+" map ext
+autocmd BufRead,BufNewFile *.vue set filetype=html
+
