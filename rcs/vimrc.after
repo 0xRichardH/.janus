@@ -1,7 +1,14 @@
-color molokai
-let g:molokai_original = 1
+" color molokai
+" let g:molokai_original = 1
+set t_Co=256
+set background=dark
 
-"let mapleader=","
+color Tomorrow-Night
+
+
+"" Encoding
+set fileencoding=utf-8
+set fileencodings=utf-8
 
 " clipboard
 if has('clipboard')
@@ -14,6 +21,8 @@ endif
 
 " NerdTree
 map <C-e> :NERDTreeToggle<CR>
+let g:NERDSpaceDelims = 1
+let NERDTreeShowHidden = 1
 
 " Strip trailing whitespace
 " function! <SID>StripTrailingWhitespaces()
@@ -32,6 +41,9 @@ endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " StatusLine
+set laststatus=2
+set statusline=\ %F%m%r%h%w%=[%{&ff}/%Y]\ \ [line\:\ %l\/%L,\ col\:\ %c]\ \ %p%%\ \ %{strftime(\"%H:%M:%S\")}\
+
 if janus#is_plugin_enabled('fugitive')
   set statusline+=%{fugitive#statusline()}
 endif
