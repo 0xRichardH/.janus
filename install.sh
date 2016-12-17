@@ -9,7 +9,7 @@ git clone --recursive https://github.com/haoxilu/.janus "${HOME}/.janus" \
   || die "Could not clone the repository to ${HOME}/.janus"
 
 # Add .vimrc files to the home directory
-for rc in "vimrc.after" "vimrc.before" "gvimrc.after" "gvimrc.before" "ackrc"; do
+for rc in "vimrc.after" "vimrc.before"  "ackrc"; do
   ln -s "${HOME}/.janus/rcs/${rc}" "${HOME}/.${rc}" || die "Could not link ${rc} file to .${rc}"
   echo ".${rc} has been linked to .janus ${rc}"
 done
