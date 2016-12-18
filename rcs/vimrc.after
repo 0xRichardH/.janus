@@ -13,6 +13,27 @@ set relativenumber
 set fileencoding=utf-8
 set fileencodings=utf-8
 
+"" Split
+set splitbelow
+set splitright
+
+
+" Cursor
+set cursorline
+set cursorcolumn
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
+"" Switching mode tricks
+set ttimeout
+set ttimeoutlen=1
+
 " clipboard
 if has('clipboard')
   if has('unnamedplus')  " When possible use + register for copy-paste
