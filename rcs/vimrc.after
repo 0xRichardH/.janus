@@ -13,6 +13,16 @@ set relativenumber
 set fileencoding=utf-8
 set fileencodings=utf-8
 
+"" Binary
+set bomb
+set binary
+set ttyfast
+
+"" Backup
+set nobackup
+set nowritebackup
+set noswapfile
+
 "" Split
 set splitbelow
 set splitright
