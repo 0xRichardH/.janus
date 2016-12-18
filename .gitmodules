@@ -16,3 +16,6 @@
 [submodule "vim-snippets"]
 	path = vim-snippets
 	url = https://github.com/honza/vim-snippets
+[submodule "vim-surround"]
+  path = vim-surround
+  url = https://github.com/tpope/vim-surround
