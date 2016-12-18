@@ -5,6 +5,9 @@ set background=dark
 
 color Tomorrow-Night
 
+" Enable relative number
+set relativenumber
+
 
 "" Encoding
 set fileencoding=utf-8
