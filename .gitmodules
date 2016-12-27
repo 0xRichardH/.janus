@@ -19,3 +19,9 @@
 [submodule "vim-surround"]
   path = vim-surround
   url = https://github.com/tpope/vim-surround
+[submodule "html5"]
+  path = html5
+	url = https://github.com/othree/html5.vim
+[submodule "delimitMate"]
+  path = delimitMate
+  url = https://github.com/Raimondi/delimitMate
