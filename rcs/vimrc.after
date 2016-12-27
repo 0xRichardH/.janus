@@ -23,6 +23,17 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+
+set scrolloff=5
+
+"" Tabs.
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set shiftround
+set expandtab
+set autoindent
+
 "" Split
 set splitbelow
 set splitright
