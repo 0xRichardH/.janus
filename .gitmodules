@@ -25,3 +25,6 @@
 [submodule "delimitMate"]
   path = delimitMate
   url = https://github.com/Raimondi/delimitMate
+[submodule "emmet-vim"]
+  path = emmet-vim
+  url = https://github.com/mattn/emmet-vim
