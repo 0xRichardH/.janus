@@ -28,3 +28,6 @@
 [submodule "emmet-vim"]
   path = emmet-vim
   url = https://github.com/mattn/emmet-vim
+[submodule "vim-emoji"]
+	path = vim-emoji
+	url = git@github.com:junegunn/vim-emoji.git
