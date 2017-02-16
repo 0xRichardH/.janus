@@ -102,3 +102,6 @@ endif
 " map ext
 autocmd BufRead,BufNewFile *.vue set filetype=html
 
+" vim emoji
+set completefunc=emoji#complete
+
